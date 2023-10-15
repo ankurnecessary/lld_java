@@ -1,6 +1,4 @@
-package lld2_oop2_access_modifiers_and_constructors.constructor_helper;
-
-import lld2_oop2_access_modifiers_and_constructors.constructors.Student;
+package O2_02032023_lld_oop2_access_modifiers_and_constructors.constructor_helper;
 
 public class Main {
     public static void main(String[] args) {
