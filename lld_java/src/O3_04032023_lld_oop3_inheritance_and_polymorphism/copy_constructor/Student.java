@@ -3,9 +3,10 @@ package O3_04032023_lld_oop3_inheritance_and_polymorphism.copy_constructor;
 public class Student {
     int age;
     String name;
-    String gender;
+    private String gender;
 
-    Student() {
+    Student(String gender) {
+        this.gender = gender;
         System.out.println("To show constructor overloading");
     }
 
