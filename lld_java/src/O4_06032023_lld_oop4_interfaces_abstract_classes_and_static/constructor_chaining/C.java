@@ -4,4 +4,7 @@ public class C extends B{
     C() {
         System.out.println("Constructor of C");
     }
+    C(String name, String email) {
+        System.out.println("Constructor of C with name: " + name + " and email: " + email );
+    }
 }
