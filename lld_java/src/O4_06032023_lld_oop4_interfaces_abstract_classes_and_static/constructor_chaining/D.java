@@ -5,5 +5,7 @@ public class D extends C{
         // We used super call because C's constructor has parameters in it's constructor
         super("Ankur", "test@test.com");
         System.out.println("Constructor of D");
+
+        getI();
     }
 }
