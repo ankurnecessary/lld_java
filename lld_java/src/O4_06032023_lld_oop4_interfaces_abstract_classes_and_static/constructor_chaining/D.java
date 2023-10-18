@@ -6,6 +6,9 @@ public class D extends C{
         super("Ankur", "test@test.com");
         System.out.println("Constructor of D");
 
-        getI();
+        this.setI(11);
+
+        this.getI();
+
     }
 }

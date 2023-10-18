@@ -11,4 +11,8 @@ public class A {
     void getI () {
         System.out.println(i);
     }
+
+    void setI (int i) {
+        this.i = i;
+    }
 }
