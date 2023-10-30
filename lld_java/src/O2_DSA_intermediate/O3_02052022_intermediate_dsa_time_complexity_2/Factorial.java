@@ -10,7 +10,8 @@ public class Factorial {
         // recursive case
         return n * getFactorial(n-1);
     }
-
+    // TC - O(n)
+    // SC - O(n)
     public static void main(String[] args) {
         System.out.println(getFactorial(5));
     }

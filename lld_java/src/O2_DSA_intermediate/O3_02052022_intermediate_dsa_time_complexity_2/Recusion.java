@@ -18,6 +18,8 @@ public class Recusion {
         stepsToHome(stepNo+1, totalStepsNeeded);
         System.out.println("After we reached home");
     }
+    // TC: O(n)
+    // SC:
     public static void main(String[] args) {
         stepsToHome(0, 10);
     }
