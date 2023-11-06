@@ -36,6 +36,9 @@ public class Bird {
         We made instance of these classes in the Bird's child classes and use their fly method accordingly.
         But now we are violating DIP SOLID principle.
         We will fix it in next version
+
+        V4 - We resolved violation of DIP in V4.
+        Now our code is fully adhering all the SOLID principles.
     */
 
     public void makeSound() {
