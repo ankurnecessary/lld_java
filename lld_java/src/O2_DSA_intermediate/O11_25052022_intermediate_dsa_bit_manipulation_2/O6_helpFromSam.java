@@ -1,6 +1,7 @@
 package O2_DSA_intermediate.O11_25052022_intermediate_dsa_bit_manipulation_2;
 
 /**
+ * https://www.scaler.com/academy/mentee-dashboard/class/25641/assignment/problems/4531?navref=cl_tt_nv
  * Q1. Help From Sam
  *
  * >>Problem Description<<

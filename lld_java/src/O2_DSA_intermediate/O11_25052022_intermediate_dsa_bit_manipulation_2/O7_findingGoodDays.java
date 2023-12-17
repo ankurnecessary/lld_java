@@ -1,6 +1,7 @@
 package O2_DSA_intermediate.O11_25052022_intermediate_dsa_bit_manipulation_2;
 
 /**
+ * https://www.scaler.com/academy/mentee-dashboard/class/25641/assignment/problems/9412/?navref=cl_pb_nv_tb
  * >>Problem Description
  * Alex has a cat named Boomer. He decides to put his cat to the test for eternity.
  *
