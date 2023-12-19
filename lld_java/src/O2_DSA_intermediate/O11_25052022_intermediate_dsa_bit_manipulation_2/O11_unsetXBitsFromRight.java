@@ -50,6 +50,7 @@ public class O11_unsetXBitsFromRight {
         Long A = 93L;
         int B = 4;
         System.out.println(unsetXBitsFromRight(A, B));
+        System.out.println(unsetXBitsFromRight1(A, B));
     }
 
     private static Long unsetXBitsFromRight(Long A, int B) {
@@ -59,4 +60,9 @@ public class O11_unsetXBitsFromRight {
     }
     // TC - O(1)
     // SC - O(1)
+
+    private static Long unsetXBitsFromRight1(Long A, int B) {
+        int mask = -1 << B;
+        return mask & A;
+    }
 }
