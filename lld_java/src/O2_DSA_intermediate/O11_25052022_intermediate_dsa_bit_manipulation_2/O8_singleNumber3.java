@@ -65,27 +65,16 @@ public class O8_singleNumber3 {
             xorNum = xorNum >> 1;
         }
 
-        // Adding array element group0 if we have ith (bitIndex) bit of it as 0
-        // Adding array element group1 if we have ith (bitIndex) bit of it as 1
-        ArrayList<Integer> group0 = new ArrayList();
-        ArrayList<Integer> group1 = new ArrayList();
-        for(int i = 0; i < nums.size(); i++) { // TC - O(n)
-            if((nums.get(i) & (1<<bitIndex)) != 0) {
-                group1.add(nums.get(i));
+        // Figuring out 2 non repeating numbers via xor'ing after separating
+        // them on the basis of 0 and 1 on the location bitIndex
+        int num0 = 0;
+        int num1 = 0;
+        for (Integer num : nums) {
+            if ((num & (1 << bitIndex)) != 0) {
+                num0 ^= num;
+            } else {
+                num1 ^= num;
             }
-            else {
-                group0.add(nums.get(i));
-            }
-        }
-
-        // Figuring out 2 numbers via xoring
-        int num0 = group0.get(0),
-                num1 = group1.get(0);
-        for(int i = 1; i < group0.size(); i++) {
-            num0 ^= group0.get(i);
-        }
-        for(int i = 1; i < group1.size(); i++) {
-            num1 ^= group1.get(i);
         }
 
         // setting num0 and num1 in ansArr
