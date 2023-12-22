@@ -36,12 +36,71 @@ import java.util.Arrays;
 
 public class O5_repeatAndMissingNumberArray {
     public static void main(String[] args) {
-        Integer[] arr = {1,2,3,4,5,2};
+        Integer[] arr = {1,2,3,4,1,6};
         ArrayList<Integer> arrList = new ArrayList(Arrays.asList(arr));
         System.out.println(repeatAndMissingNumberArray(arrList));
+        System.out.println(repeatAndMissingNumberArray1(arrList));
     }
 
+    // Using bitwise operator xor
     private static ArrayList<Integer> repeatAndMissingNumberArray(ArrayList<Integer> A) {
+        int n = A.size();
+        int val = 0;
+        int repeatingNum = 0;
+        int missingNum = 0;
+
+        // To get xor of A[] and of numbers from 1 to n.
+        // val - This will give us the xor of repeating and missing number
+        for(int i = 0; i < n; i++) { // O(n)
+            val = val ^ A.get(i) ^ (i+1);
+        }
+
+        // place - It will give us the place at which first one is placed in val
+        int place = 0;
+        while ((val & 1) != 1) { // O(1) max 32 times
+            val = val >> 1;
+            place++;
+        }
+
+        int val0 = 0,
+            val1 = 0;
+
+        for(int i = 0; i < n; i++) { // O(n)
+            if((A.get(i) >> place & 1) == 1) {
+                val1 ^= A.get(i);
+            }
+            else {
+                val0 ^= A.get(i);
+            }
+
+            if(((i+1) >> place & 1) == 1) {
+                val1 ^= (i+1);
+            }
+            else {
+                val0 ^= (i+1);
+            }
+        }
+
+        for(Integer ele : A) { // O(n)
+            if(val0 == ele) {
+                repeatingNum = val0;
+            }
+        }
+
+        repeatingNum = repeatingNum == 0 ? val1 : val0;
+        missingNum = repeatingNum == val1 ? val0 : val1;
+
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(repeatingNum);
+        arr.add(missingNum);
+
+        return arr;
+    }
+    // TC - O(n) where n is the no. of array elements
+    // SC - O(1)
+
+    // Using maths
+    private static ArrayList<Integer> repeatAndMissingNumberArray1(ArrayList<Integer> A) {
 
         ArrayList<Integer> ansArr = new ArrayList(2);
         long n = A.size();
