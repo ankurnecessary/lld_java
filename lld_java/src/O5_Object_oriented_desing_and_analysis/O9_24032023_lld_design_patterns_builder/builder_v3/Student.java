@@ -21,7 +21,7 @@ Now any key can take any type of data in Map. That means following code will als
 
 builder.put("fName", 20);
 
-A good codebase breaks at compiletime not at runtime.
+A good codebase breaks at compile time not at runtime.
  */
 
 import java.util.Map;
