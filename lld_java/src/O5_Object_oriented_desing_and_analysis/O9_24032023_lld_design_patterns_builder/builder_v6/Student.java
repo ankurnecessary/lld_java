@@ -29,6 +29,9 @@ This will eradicate the chances of typos in the field names.
 This will also make sure that a particular field will take only certain type of value and not any type of value, like in v3.
 There is also one more issue with the current implementation. That is we cannot make out after looking at Student class that it has a builder pattern implemented
 for it.
+
+Builder v5 & v6 - Are the final version which addresses all the issues in all the previous versions of the Student class.
+Added method chaining in v6 to further simplify the code.
  */
 public class Student {
     private String fName;
