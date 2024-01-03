@@ -1,5 +1,8 @@
 package O5_Object_oriented_desing_and_analysis.O9_24032023_lld_design_patterns_builder.builder_v6;
 
+import javax.naming.directory.InvalidAttributesException;
+import java.security.InvalidParameterException;
+
 /*
 Builder v1 - In the code below we created all private fields and also created their getter and setters because of which the class became quite bulky.
 Also, client of this class has to create its object via default constructor of Student class and used setter of each field to assign a property to it.
@@ -129,7 +132,14 @@ public class Student {
             return this;
         }
 
+        private boolean validate() {
+            return true;
+        }
+
         public Student build() {
+//            if(!validate()) {
+//                throw new InvalidAttributesException("Invalid");
+//            }
             return new Student(this);
         }
     }
