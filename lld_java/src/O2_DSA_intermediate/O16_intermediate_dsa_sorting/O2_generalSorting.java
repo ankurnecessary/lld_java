@@ -1,6 +1,7 @@
 package O2_DSA_intermediate.O16_intermediate_dsa_sorting;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 /*
@@ -33,6 +34,11 @@ public class O2_generalSorting {
             }
         });
         System.out.println(Arrays.deepToString(coordinates));
+
+        // Sorting in reverse order
+        String[] arr = {"4","5","2","3","1"};
+        Arrays.sort(arr, Collections.reverseOrder());
+        System.out.println(Arrays.toString(arr));
 
     }
 }
