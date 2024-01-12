@@ -12,10 +12,12 @@ public class IntelligentStudent extends Student {
 
     IntelligentStudent(){}
 
-    IntelligentStudent(IntelligentStudent student) {
-        super(student);
-        this.psp = student.psp;
-        this.iq = student.iq;
+    IntelligentStudent(IntelligentStudent target) {
+        super(target);
+        if(target != null) {
+            this.psp = target.psp;
+            this.iq = target.iq;
+        }
     }
 
     @Override

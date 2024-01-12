@@ -14,10 +14,12 @@ public class Student {
 
     Student(){}
 
-    Student(Student student) {
-        this.name = student.name;
-        this.age = student.age;
-        this.university = student.university;
+    Student(Student target) {
+        if(target != null) {
+            this.name = target.name;
+            this.age = target.age;
+            this.university = target.university;
+        }
     }
 
     public void setName(String name) {
