@@ -6,7 +6,7 @@ Question2: Given a char[] which contains only lowercase letters. Sort the given 
 The algorithm that we used here is COUNT SORT
 
 TC - O(n + range of lowercase alphabets i.e. 26)
-SC - O(1)
+SC - O(1) or O(range), Generally it is O(range) but we have limited no. of alphabet in this case so we say it is O(1)
  */
 public class O2_character_array_sorting {
 
